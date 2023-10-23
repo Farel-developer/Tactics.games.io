@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css?family=Kavivanar");
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-image:url('./wood.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+#tictac {
+  position: relative;
+  background: #0D170F;
+  background: radial-gradient(closest-side at 50% 50%, #0a4027, #041d11);
+  border-radius: 10px;
+  color: #a6d9c1;
+  font-family: 'Kavivanar', cursive;
+  top: 100px;
+  width: 300px;
+  height: 400px;
+  margin: auto;
+  box-shadow: 2px 5px 50px 1px #360a1f; }
+  #tictac .info {
+    width: 100%;
+    height: 100px;
+    position: relative; }
+    #tictac .info .title {
+      text-align: center;
+      font-size: 25px;
+      margin-top: 40px;
+      position: absolute;
+      width: 100%; }
+    #tictac .info .reset {
+      position: absolute;
+      bottom: 50px;
+      right: 25px;
+      font-size: 17px; }
+    #tictac .info .score {
+      top: 20px;
+      left: 35px;
+      position: absolute;
+      text-align: justify;
+      width: 110px;
+      font-weight: bold; }
+      #tictac .info .score .player1Win, #tictac .info .score .opponentWin {
+        right: 0;
+        position: absolute; }
+  #tictac .blinking {
+    color: #d6297a; }
+  #tictac .board {
+    position: relative;
+    width: 100%;
+    height: 300px; }
+    #tictac .board .player-sel, #tictac .board .sym-sel {
+      position: relative;
+      width: 85%;
+      margin: auto;
+      display: flex;
+      top: 70px;
+      font-size: 25px; }
+    #tictac .board .sym-sel button {
+      font-size: 30px; }
+    #tictac .board .p1 {
+      width: 100%;
+      font-size: 30px;
+      position: absolute;
+      text-align: center;
+      top: 15px; }
+    #tictac .board .or {
+      display: inline-block;
+      margin: 20px;
+      color: #a6d9c1; }
+    #tictac .board .back {
+      position: absolute;
+      right: 25px;
+      top: 250px; }
+    #tictac .board table {
+      color: #a6d9c1;
+      display: block;
+      font-size: 40px;
+      margin: auto;
+      text-align: center;
+      padding: 14px; }
+      #tictac .board table td {
+        width: 90px;
+        vertical-align: middle;
+        border-right: 2px solid #a6d9c1;
+        border-bottom: 2px solid #a6d9c1; }
+      #tictac .board table tr {
+        height: 90px; }
+      #tictac .board table tr:nth-child(3) td {
+        border-bottom: none; }
+      #tictac .board table td:nth-child(3n) {
+        border-right: none; }
+      #tictac .board table .check {
+        background-color: #0b0206;
+        color: #d6297a; }
+    #tictac .board .result {
+      display: none;
+      font-size: 30px;
+      font-style: italic;
+      margin: auto;
+      position: absolute;
+      text-align: center;
+      top: 50px;
+      width: 100%; }
+      #tictac .board .result img {
+        /*position: absolute;
+        top: 100px;*/
+        margin-bottom: 20px;
+        width: 150px; }
+      #tictac .board .result p {
+        text-indent: 0; }
+    #tictac .board .draw {
+      display: block;
+      color: #21de86;
+      text-shadow: 1px 1px 10px #ff0077;
+      top: 125px; }
+      #tictac .board .draw img {
+        display: none; }
+    #tictac .board .computerWin {
+      display: block;
+      color: #d6297a;
+      text-shadow: 1px 0 1px #22d481; }
+      #tictac .board .computerWin img {
+        display: inline-block; }
+    #tictac .board .playerWin {
+      display: block;
+      color: #d6297a;
+      text-shadow: 1px 0 1px #22d481;
+      top: 125px; }
+      #tictac .board .playerWin img {
+        display: none; }
+  #tictac button {
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Kavivanar', cursive;
+    margin: auto;
+    border: none;
+    background: transparent;
+    color: #92b54a;
+    transition-duration: 0.2s; }
+  #tictac button:active {
+    transform: translate(1px, 1px); }
+  #tictac button:hover {
+    color: #a1e31c; }
+
+/*# sourceMappingURL=tic-tac-toe.css.map */

@@ -1,0 +1,253 @@
+body {
+  background: #405061;
+}
+
+.hidden {
+  display: none !important;
+}
+
+menu {
+  display: block;
+  margin: 0 auto;
+  width: 80vw;
+}
+menu > * {
+  display: block;
+  text-align: center;
+  margin: 1em auto;
+}
+menu h1 {
+  font-weight: 300;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  left: 15vh;
+}
+menu .human{
+  border: 1px solid #b2bfcc;
+  background: #4b5b6c;
+  color: #d9dfe6;
+  cursor: pointer;
+  display: block;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 1em;
+  min-width: 50%;
+  border-radius: 1em;
+  position: absolute;
+  left: 15vh;
+  top: 20vh;
+}
+menu .back {
+  border: 1px solid #b2bfcc;
+  background: #4b5b6c;
+  color: #d9dfe6;
+  cursor: pointer;
+  display: block;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 1em;
+  min-width: 50%;
+  border-radius: 1em;
+  position: absolute;
+  left: 15vh;
+  top: 30vh;
+}
+menu button[disabled] {
+  cursor: default;
+  opacity: 0.3;
+  font-weight: 100;
+}
+
+/* Game Styling */
+body {
+  border-top: 1vh solid transparent;
+  color: #b2bfcc;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  padding: 0;
+  margin: 0;
+  transition: 0.3s border-top-color ease-in-out;
+}
+body.current_turn_x {
+  border-top-color: #09f;
+}
+body.current_turn_o {
+  border-top-color: #f90;
+}
+body.complete {
+  border-top-color: transparent;
+}
+body.complete .description {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+stage,
+ministage {
+  display: table;
+  border-collapse: collapse;
+}
+
+row {
+  display: table-row;
+}
+
+board,
+cell {
+  display: table-cell;
+  border-collapse: collapse;
+}
+
+stage {
+  font-family: "Inconsolata", monospace;
+  font-weight: bold;
+  font-size: 0.8vw;
+  height: 100em;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100em;
+}
+stage::before {
+  content: "";
+  font-size: 150em;
+  left: 50%;
+  top: 55%;
+  opacity: 0;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition: 0.6s top ease-in-out, 0.6s opacity ease-in-out;
+  z-index: 1;
+}
+stage.complete::before {
+  opacity: 1;
+  top: 35%;
+}
+stage.complete board {
+  opacity: 0.2;
+}
+stage.complete board.active {
+  background: transparent;
+}
+stage.taken_x::before {
+  color: #09f;
+  content: "x";
+}
+stage.taken_o::before {
+  color: #f90;
+  content: "o";
+}
+stage .description {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 100;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  text-align: center;
+  padding: 0 0 1em;
+}
+stage .description span {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.8em;
+  vertical-align: -0.15em;
+  margin: 0 0.2em;
+}
+stage .description .color_x {
+  color: #09f;
+}
+stage .description .color_o {
+  color: #f90;
+}
+stage stage {
+  font-size: 0.22em;
+  position: relative;
+}
+stage board {
+  border: 0 solid #b2bfcc;
+  height: 33.33em;
+  padding: 1em;
+  position: relative;
+  transition: 0.3s border-color ease-in-out, 0.3s opacity ease-in-out;
+  width: 33.33em;
+}
+stage board.active {
+  background: #4a5d70;
+}
+stage board.inactive board {
+  opacity: 0.4;
+  border-color: #5d6c7c;
+}
+stage board.complete board {
+  opacity: 1;
+  border-color: #b2bfcc;
+}
+stage board.taken_x board, stage board.taken_o board {
+  opacity: 0.4;
+  border-color: #5d6c7c;
+}
+stage board::before {
+  font-size: 40em;
+  left: 50%;
+  top: 37%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+stage board.taken_x::before {
+  color: #09f;
+  content: "x";
+}
+stage board.taken_o::before {
+  color: #f90;
+  content: "o";
+}
+stage board:nth-child(2n) {
+  border-left-width: 1px;
+  border-right-width: 1px;
+}
+stage board.inactive board.cell {
+  cursor: default;
+}
+stage board.cell {
+  cursor: pointer;
+  position: relative;
+}
+stage board.cell::before {
+  font-size: 25em;
+  left: 50%;
+  position: absolute;
+  top: 40%;
+  transform: translate(-50%, -50%);
+}
+stage board.cell.taken_x::before {
+  color: #09f;
+  content: "x";
+}
+stage board.cell.taken_o::before {
+  color: #f90;
+  content: "o";
+}
+stage > row:nth-child(n+2) > board {
+  border-top-width: 1px;
+}
+stage .description + row > board {
+  border-top-width: 0;
+}
+
+body {
+  background-image: url('./wood.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}

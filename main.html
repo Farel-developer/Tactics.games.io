@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Game</title>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">	
+<title>Choose Mode</title>
+<meta name="author" content="stepan" >
+<meta name="keywords" content="Tic Tac Toe Game">
+<meta name="description" content="Tic Tac Toe Game project"><link rel="stylesheet" href="./main.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<article id="tictac">   
+    <div class="info">
+      <div class="title">
+        <p>Choose Mode</p>      
+      </div>
+      <div class="score">
+        <p><i class="player1">Player:</i> &nbsp; <i class="player1Win">0</i></p>
+        <br>
+        <p><i class="opponent">Computer:</i> &nbsp; <i class="opponentWin">0</i></p>  
+      </div>
+      <button class="reset">Reset</button>
+    </div>
+    <div class="board">
+      <div class="player-sel">
+        <button class="one-player">One Player</button>
+        <div class="or">  
+          <p> OR </p>
+        </div>
+        <button class="two-players">Two Players</button>
+      </div>
+      <div class="p1">
+        <p>Player 1:</p>
+      </div>
+      <div class="sym-sel">
+        <button class="cross"> X </button>
+        <div class="or"> 
+          <p> OR </p>
+        </div>
+        <button class="naught"> 0 </button>
+      </div>
+      <button class="back"> <i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp; Back </button>
+      <table class="grid">
+        <tr>
+          <td class="0"></td>
+          <td class="1"></td>
+          <td class="2"></td>
+        </tr>
+        <tr>
+          <td class="3"></td>
+          <td class="4"></td>
+          <td class="5"></td>
+        </tr>
+        <tr>
+          <td class="6"></td>
+          <td class="7"></td>
+          <td class="8"></td>
+        </tr>
+      </table>
+      <div class="result">
+        <img class="troll-face" src="https://stepan20000.github.io/images/tic-tac-toe/troll-face.png" alt="troll-face">
+        <p>Computer beat you</p>      
+      </div>
+    </div>
+  </article>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://use.fontawesome.com/e9bbf5de1c.js'></script><script  src="./main.js"></script>
+
+</body>
+</html>
